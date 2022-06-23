@@ -1,8 +1,15 @@
 # GreekHackers-Virtual-Team
-
-
-
 Team Members Names. (Greek Hackers).
+1.Ketro Sithole (Team Leader)   sithole.tk@tuks.co.za
+2.Kudakwashe Chivunga (Deputy)   
+3.Isaac Choma
+4.Precious Nhlapo
+5.Abdud-Dayyaan Sedick
+6.Andrew Maphosa
+7.Lettie Molapisi
+8.Surprise Mhlongo
+9.Khuselo Ngqamakhwe 
+10.Paballo Mathipa
 
 # Township-SMME-Hackathon-2022
 
