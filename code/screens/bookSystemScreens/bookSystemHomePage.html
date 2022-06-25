@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/bookSystemHomePage.css">
-
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/font-awesome.min.css"> -->
+    <script src="https://kit.fontawesome.com/cf2aa695e2.js" crossorigin="anonymous"></script>
     <title>BI System</title>
 </head>
 <body>
@@ -22,8 +23,55 @@
         <a class="active" href="">Home | </a>
     </div>
 
+    <div id="pageHeader">
+        <h1 id="pageHeading">Book System</h1>
+        <div class="search">
+            <form action="#">
+                <input type="text"
+                    placeholder=" Search ..."
+                    name="search">
+                    <button style="background-color: #ece9e9;">
+                        <i class="fa fa-search"
+                            style="font-size: 18px; color: black;">
+                            
+                        </i>
+                    </button>
+            </form>
+        </div>
+    </div>
+  
+    <div class="bookSystemSectionBlocks">
+        
+        <a href="./invoices.html">
+            <div class="blocks">
+                <i class="invoiceIcon fa fa-credit-card fa-2x"></i>
+                <p class="blockHeading">Invoices</p>
+            </div>
+        </a>
+
+        <div class="blocks">
+            <i class="invoiceIcon fa fa-hand-holding-dollar fa-2x"></i>
+            <p class="blockHeading">Quotations</p>
+        </div>
+        <div class="blocks">
+            <i class="invoiceIcon fa fa-notes-medical fa-2x"></i>                 
+            <p class="blockHeading">Orders</p>
+        </div>
+        <div class="blocks">
+            <i class="invoiceIcon fa fa-notes-medical fa-2x"></i>                 
+            <p class="blockHeading">Minutes</p>
+        </div>
+        <div class="blocks">
+            <i class="invoiceIcon fa fa-money-bill-trend-up fa-2x"></i>
+            <p class="blockHeading">Reports</p>
+        </div>
+        <div class="blocks">
+            <i class="invoiceIcon fa fa-money-bill-transfer fa-2x"></i>            
+            <p class="blockHeading">Finance</p>
+        </div>
     
-    
+    </div>
+
 
 </body>
 </html>
