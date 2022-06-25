@@ -159,3 +159,20 @@ body {
   float: right;
   margin-top: 1%;
 }
+
+.buttons
+{
+  float: left;
+}
+.iconDeco
+{
+  float: left;
+  margin-left: 4%;
+  margin-top: 5%;
+}
+
+.invoiceInstr
+{
+  float: right;
+  margin-right:8%;
+}
