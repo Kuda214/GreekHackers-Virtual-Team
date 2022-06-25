@@ -102,7 +102,9 @@ body {
     background-color: #06152C;
     width: 24%;
     height: 200px;
-    margin: 4%;
+    margin-top: 4%;
+    margin-left: 4%;
+    margin-right: 4%;
     border-radius: 10%;
     text-align: center;
     align-items: center;
@@ -118,4 +120,12 @@ body {
   align-self: center;
   text-align: center;
   height: 100%;
+}
+
+.invoiceIcon{
+  /* width: 100px;
+  height: 100px; */
+  /* margin: auto; */
+  /* font-size: f; */
+  margin-top: 18%;
 }
