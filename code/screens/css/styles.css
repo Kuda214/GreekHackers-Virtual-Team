@@ -104,8 +104,8 @@ body {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
-    opacity: 0.6;
-    filter: brightness(50%);
+    opacity: 0.9;
+    filter: brightness(90%);
    
   }
 
@@ -117,7 +117,7 @@ body {
     position: absolute;
     bottom: 200px;
     right: 20px;
-    color: white;
+    color: #071d3d;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 30px;
@@ -195,5 +195,9 @@ body {
 }
 
 .info{
+  text-align: center;
+}
+
+.head{
   text-align: center;
 }
