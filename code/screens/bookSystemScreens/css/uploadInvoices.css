@@ -126,6 +126,20 @@ body {
     /* border-radius:20% ; */
 }
 
-#btnText{
-    /* padding-top: -2%; */
+.uploadInstruction
+{
+  font-size: larger;
+  font-weight: bolder;
+  color: #000;
+  
+}
+
+.instructionIcon
+{
+  color:#071d3d;
+  margin-top: 15%;
+}
+
+#uploadBtn{
+  margin-left: 42%;
 }

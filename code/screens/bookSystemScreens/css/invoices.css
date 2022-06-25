@@ -103,6 +103,7 @@ body {
     height: 300px;
     margin-left: 5%;
     margin-top: 3%;
+    float: left;
 
 }
 .invoice{
@@ -112,9 +113,11 @@ body {
     width: 50%;
     margin: 1%;
     border-radius: 2%;
+
 }
 
 .invoiceTitle{
+  float: left;
     margin-left: 2%;
     font-weight: bold;
 }
@@ -132,4 +135,27 @@ body {
     float: left;
     text-align: center;
     
+}
+
+.invoiceBarBinIcon{
+  color: #f00;
+  margin-right: 2%;
+  float: right;
+  margin-top: 1%;
+}
+
+.invoiceBarDownloadIcon
+{
+  color: #f6ff00;
+  margin-right: 2%;
+  float: right;
+  margin-top: 1%;
+}
+
+.invoiceBarShareIcon
+{
+  color: #12bed5;
+  margin-right: 2%;
+  float: right;
+  margin-top: 1%;
 }
