@@ -76,7 +76,7 @@ form .txt_field{
 }
 .pass{
   margin: -5px 0 20px 5px;
-  color: #a6a6a6;
+  color: #463939;
   cursor: pointer;
 }
 .pass:hover{
@@ -95,7 +95,7 @@ input[type="submit"]{
   outline: none;
 }
 input[type="submit"]:hover{
-  border-color: #2691d9;
+  border-color: #191d20;
   transition: .5s;
 }
 .signup_link{
@@ -105,7 +105,7 @@ input[type="submit"]:hover{
   color: #666666;
 }
 .signup_link a{
-  color: #2691d9;
+  color: #69512d;
   text-decoration: none;
 }
 .signup_link a:hover{
