@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/uploadInvoices.css">
-    <title>Document</title>
+    <script src="https://kit.fontawesome.com/cf2aa695e2.js" crossorigin="anonymous"></script>
+    <title>BI System</title>
 </head>
 <body>
      <!-- Nav bar -->
@@ -15,9 +16,9 @@
             <p id="navName">BI System</p>
         </div>
         <a href="">Contact </a>
-        <a href="">Information Center | </a>
-        <a href="">Book System | </a>
-        <a class="active" href="">Home | </a>
+        <a href="../InformationCentre.html/">Information Center | </a>
+        <a class="active" href="./bookSystemHomePage.html">Book System | </a>
+        <a href="../homePage.html">Home | </a>
     </div>
 
     <div id="pageHeader">
@@ -27,9 +28,10 @@
                 <input type="text"
                     placeholder=" Search..."
                     name="search">
-                <button>
+                <button style="background-color: #ece9e9;">
                     <i class="fa fa-search"
-                        style="font-size: 18px;">
+                        style="font-size: 18px; color: black;">
+                        
                     </i>
                 </button>
             </form>
@@ -38,15 +40,20 @@
 
     <!-- content -->
     <div id="uploadBox">
-        <p >Browse documents to upload</p>
+        <form action="/action_page.php">
+            <i  class="instructionIcon fa fa-upload fa-3x"></i><br>
+
+            <input type="file" id="myFile" name="filename">
+          
+         
+          
+        <p class="uploadInstruction" >Browse documents to upload</p>
     </div>
 
-    <a href="./invoices.html">
-        <button id="uploadBtn">
-            <p id="btnText">Upload Invoice</p>
-        </button>
-    </a>
 
-    
+    <input id="uploadBtn" type="submit" name="Upload File" >
+    </form>
+
+
 </body>
 </html>
