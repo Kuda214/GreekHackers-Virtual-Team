@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SMME_Hackathon2022ModelStoreContainer" CdmEntityContainer="SMME_Hackathon2022Entities">
+    <EntitySetMapping Name="Company_Account">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Company_Account">
+        <MappingFragment StoreEntitySet="Company_Account">
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+          <ScalarProperty Name="Company_EmailAddress" ColumnName="Company_EmailAddress" />
+          <ScalarProperty Name="CompanyPassword" ColumnName="CompanyPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CompanyReports">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.CompanyReport">
+        <MappingFragment StoreEntitySet="CompanyReport">
+          <ScalarProperty Name="ReportID" ColumnName="ReportID" />
+          <ScalarProperty Name="ReportTitle" ColumnName="ReportTitle" />
+          <ScalarProperty Name="ReportDescription" ColumnName="ReportDescription" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customers">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Customer">
+        <MappingFragment StoreEntitySet="Customer">
+          <ScalarProperty Name="Customer_ID" ColumnName="Customer_ID" />
+          <ScalarProperty Name="Customer_Name" ColumnName="Customer_Name" />
+          <ScalarProperty Name="Customer_Surname" ColumnName="Customer_Surname" />
+          <ScalarProperty Name="Customer_Email" ColumnName="Customer_Email" />
+          <ScalarProperty Name="Customer_Cellphone" ColumnName="Customer_Cellphone" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employees">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Employee">
+        <MappingFragment StoreEntitySet="Employee">
+          <ScalarProperty Name="Employee_ID" ColumnName="Employee_ID" />
+          <ScalarProperty Name="Emp_FirstName" ColumnName="Emp_FirstName" />
+          <ScalarProperty Name="Emp_SecondName" ColumnName="Emp_SecondName" />
+          <ScalarProperty Name="Emp_Surname" ColumnName="Emp_Surname" />
+          <ScalarProperty Name="Emp_EmailAddress" ColumnName="Emp_EmailAddress" />
+          <ScalarProperty Name="Gender" ColumnName="Gender" />
+          <ScalarProperty Name="Ethnicity" ColumnName="Ethnicity" />
+          <ScalarProperty Name="Emp_PhysicalAddress" ColumnName="Emp_PhysicalAddress" />
+          <ScalarProperty Name="Emp_TypeID" ColumnName="Emp_TypeID" />
+          <ScalarProperty Name="DateEmployed" ColumnName="DateEmployed" />
+          <ScalarProperty Name="Emp_StatusID" ColumnName="Emp_StatusID" />
+          <ScalarProperty Name="Image_Of_ID_Name" ColumnName="Image_Of_ID_Name" />
+          <ScalarProperty Name="Image_Of_ID_Path" ColumnName="Image_Of_ID_Path" />
+          <ScalarProperty Name="BankStatement_Image" ColumnName="BankStatement_Image" />
+          <ScalarProperty Name="BankStatement_ImagePath" ColumnName="BankStatement_ImagePath" />
+          <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Status">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Employee_Status">
+        <MappingFragment StoreEntitySet="Employee_Status">
+          <ScalarProperty Name="Emp_StatusID" ColumnName="Emp_StatusID" />
+          <ScalarProperty Name="Employee_Status1" ColumnName="Employee_Status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Employee_Type">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Employee_Type">
+        <MappingFragment StoreEntitySet="Employee_Type">
+          <ScalarProperty Name="Emp_TypeID" ColumnName="Emp_TypeID" />
+          <ScalarProperty Name="Employee_Type_Description" ColumnName="Employee_Type_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FinancialDocuments">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.FinancialDocument">
+        <MappingFragment StoreEntitySet="FinancialDocument">
+          <ScalarProperty Name="FinanceID" ColumnName="FinanceID" />
+          <ScalarProperty Name="DocumentTitle" ColumnName="DocumentTitle" />
+          <ScalarProperty Name="DocumentDescription" ColumnName="DocumentDescription" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GeneralDocuments">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.GeneralDocument">
+        <MappingFragment StoreEntitySet="GeneralDocument">
+          <ScalarProperty Name="GeneralDocumentsID" ColumnName="GeneralDocumentsID" />
+          <ScalarProperty Name="DocumentTitle" ColumnName="DocumentTitle" />
+          <ScalarProperty Name="DocumentDescription" ColumnName="DocumentDescription" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Invoices">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Invoice">
+        <MappingFragment StoreEntitySet="Invoice">
+          <ScalarProperty Name="InvoiceID" ColumnName="InvoiceID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Unit_Cost" ColumnName="Unit_Cost" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Amount" ColumnName="Amount" />
+          <ScalarProperty Name="Sub_Total" ColumnName="Sub_Total" />
+          <ScalarProperty Name="Tax_Amount" ColumnName="Tax_Amount" />
+          <ScalarProperty Name="Total_Amount" ColumnName="Total_Amount" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Meeting_Minutes">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Meeting_Minutes">
+        <MappingFragment StoreEntitySet="Meeting_Minutes">
+          <ScalarProperty Name="Meeting_MinutesID" ColumnName="Meeting_MinutesID" />
+          <ScalarProperty Name="Date_Taken" ColumnName="Date_Taken" />
+          <ScalarProperty Name="Meeting_Agenda" ColumnName="Meeting_Agenda" />
+          <ScalarProperty Name="Meeting_Description" ColumnName="Meeting_Description" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Quotations">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Quotation">
+        <MappingFragment StoreEntitySet="Quotation">
+          <ScalarProperty Name="QuotationID" ColumnName="QuotationID" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="Unit_Price" ColumnName="Unit_Price" />
+          <ScalarProperty Name="Total_Price" ColumnName="Total_Price" />
+          <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Supplier">
+        <MappingFragment StoreEntitySet="Supplier">
+          <ScalarProperty Name="Supplier_ID" ColumnName="Supplier_ID" />
+          <ScalarProperty Name="CompanyName" ColumnName="CompanyName" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+          <ScalarProperty Name="PhysicalAddress" ColumnName="PhysicalAddress" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SupplierOrders">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.SupplierOrder">
+        <MappingFragment StoreEntitySet="SupplierOrder">
+          <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="InvoiceAmount" ColumnName="InvoiceAmount" />
+          <ScalarProperty Name="ItemName" ColumnName="ItemName" />
+          <ScalarProperty Name="ItemDescription" ColumnName="ItemDescription" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+          <ScalarProperty Name="ImageName" ColumnName="ImageName" />
+          <ScalarProperty Name="ImagePath" ColumnName="ImagePath" />
+          <ScalarProperty Name="CompanyAccountID" ColumnName="CompanyAccountID" />
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="CustomerID" ColumnName="CustomerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Titles">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.Title">
+        <MappingFragment StoreEntitySet="Title">
+          <ScalarProperty Name="TitleID" ColumnName="TitleID" />
+          <ScalarProperty Name="Title_Description" ColumnName="Title_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.User">
+        <MappingFragment StoreEntitySet="User">
+          <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+          <ScalarProperty Name="Email_Address" ColumnName="Email_Address" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="UserRole_ID" ColumnName="UserRole_ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserRoles">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.UserRole">
+        <MappingFragment StoreEntitySet="UserRole">
+          <ScalarProperty Name="UserRole_ID" ColumnName="UserRole_ID" />
+          <ScalarProperty Name="UserRole_Description" ColumnName="UserRole_Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="VATs">
+      <EntityTypeMapping TypeName="SMME_Hackathon2022Model.VAT">
+        <MappingFragment StoreEntitySet="VAT">
+          <ScalarProperty Name="VAT_ID" ColumnName="VAT_ID" />
+          <ScalarProperty Name="VAT_Percentage" ColumnName="VAT_Percentage" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

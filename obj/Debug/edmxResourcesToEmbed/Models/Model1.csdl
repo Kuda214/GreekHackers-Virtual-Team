@@ -1,0 +1,212 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMME_Hackathon2022Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company_Account">
+    <Key>
+      <PropertyRef Name="CompanyAccountID" />
+    </Key>
+    <Property Name="CompanyAccountID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Company_EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyPassword" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CompanyReport">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ReportTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ReportDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Customer_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Email" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Customer_Cellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Emp_FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_SecondName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_Surname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Gender" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Ethnicity" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_PhysicalAddress" Type="String" MaxLength="300" FixedLength="false" Unicode="false" />
+    <Property Name="Emp_TypeID" Type="Int32" />
+    <Property Name="DateEmployed" Type="DateTime" Precision="0" />
+    <Property Name="Emp_StatusID" Type="Int32" />
+    <Property Name="Image_Of_ID_Name" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="Image_Of_ID_Path" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="BankStatement_Image" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="BankStatement_ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="TitleID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Employee_Status">
+    <Key>
+      <PropertyRef Name="Emp_StatusID" />
+    </Key>
+    <Property Name="Emp_StatusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Status1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Employee_Type">
+    <Key>
+      <PropertyRef Name="Emp_TypeID" />
+    </Key>
+    <Property Name="Emp_TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Employee_Type_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="FinancialDocument">
+    <Key>
+      <PropertyRef Name="FinanceID" />
+    </Key>
+    <Property Name="FinanceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GeneralDocument">
+    <Key>
+      <PropertyRef Name="GeneralDocumentsID" />
+    </Key>
+    <Property Name="GeneralDocumentsID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DocumentTitle" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="DocumentDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Unit_Cost" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Sub_Total" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Tax_Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Total_Amount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Date_Created" Type="DateTime" Precision="0" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="Meeting_Minutes">
+    <Key>
+      <PropertyRef Name="Meeting_MinutesID" />
+    </Key>
+    <Property Name="Meeting_MinutesID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Date_Taken" Type="DateTime" Precision="0" />
+    <Property Name="Meeting_Agenda" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Meeting_Description" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Quotation">
+    <Key>
+      <PropertyRef Name="QuotationID" />
+    </Key>
+    <Property Name="QuotationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemDescription" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="Unit_Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Total_Price" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="Date_Created" Type="DateTime" Precision="0" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CompanyName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EmailAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Cellphone" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="PhysicalAddress" Type="String" MaxLength="350" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="SupplierOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="OrderDate" Type="DateTime" Precision="0" />
+    <Property Name="InvoiceAmount" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="ItemName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="ItemDescription" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Quantity" Type="Int32" />
+    <Property Name="ImageName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="ImagePath" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CompanyAccountID" Type="Int32" />
+    <Property Name="SupplierID" Type="Int32" />
+    <Property Name="CustomerID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Title">
+    <Key>
+      <PropertyRef Name="TitleID" />
+    </Key>
+    <Property Name="TitleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title_Description" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Email_Address" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Password" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <Property Name="UserRole_ID" Type="Int32" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRole_ID" />
+    </Key>
+    <Property Name="UserRole_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserRole_Description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="VAT">
+    <Key>
+      <PropertyRef Name="VAT_ID" />
+    </Key>
+    <Property Name="VAT_ID" Type="Int32" Nullable="false" />
+    <Property Name="VAT_Percentage" Type="Decimal" Precision="4" Scale="2" />
+    <Property Name="Date" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityContainer Name="SMME_Hackathon2022Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Company_Account" EntityType="Self.Company_Account" />
+    <EntitySet Name="CompanyReports" EntityType="Self.CompanyReport" />
+    <EntitySet Name="Customers" EntityType="Self.Customer" />
+    <EntitySet Name="Employees" EntityType="Self.Employee" />
+    <EntitySet Name="Employee_Status" EntityType="Self.Employee_Status" />
+    <EntitySet Name="Employee_Type" EntityType="Self.Employee_Type" />
+    <EntitySet Name="FinancialDocuments" EntityType="Self.FinancialDocument" />
+    <EntitySet Name="GeneralDocuments" EntityType="Self.GeneralDocument" />
+    <EntitySet Name="Invoices" EntityType="Self.Invoice" />
+    <EntitySet Name="Meeting_Minutes" EntityType="Self.Meeting_Minutes" />
+    <EntitySet Name="Quotations" EntityType="Self.Quotation" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="SupplierOrders" EntityType="Self.SupplierOrder" />
+    <EntitySet Name="Titles" EntityType="Self.Title" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+    <EntitySet Name="VATs" EntityType="Self.VAT" />
+  </EntityContainer>
+</Schema>

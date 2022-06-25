@@ -1,0 +1,220 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SMME_Hackathon2022Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Company_Account">
+    <Key>
+      <PropertyRef Name="CompanyAccountID" />
+    </Key>
+    <Property Name="CompanyAccountID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Company_EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyPassword" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="CompanyReport">
+    <Key>
+      <PropertyRef Name="ReportID" />
+    </Key>
+    <Property Name="ReportID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ReportTitle" Type="varchar" MaxLength="50" />
+    <Property Name="ReportDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="Customer">
+    <Key>
+      <PropertyRef Name="Customer_ID" />
+    </Key>
+    <Property Name="Customer_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Customer_Name" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Customer_Email" Type="varchar(max)" />
+    <Property Name="Customer_Cellphone" Type="varchar" MaxLength="15" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee">
+    <Key>
+      <PropertyRef Name="Employee_ID" />
+    </Key>
+    <Property Name="Employee_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Emp_FirstName" Type="varchar" MaxLength="50" />
+    <Property Name="Emp_SecondName" Type="varchar" MaxLength="50" />
+    <Property Name="Emp_Surname" Type="varchar" MaxLength="50" />
+    <Property Name="Emp_EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Gender" Type="varchar" MaxLength="50" />
+    <Property Name="Ethnicity" Type="varchar" MaxLength="50" />
+    <Property Name="Emp_PhysicalAddress" Type="varchar" MaxLength="300" />
+    <Property Name="Emp_TypeID" Type="int" />
+    <Property Name="DateEmployed" Type="date" />
+    <Property Name="Emp_StatusID" Type="int" />
+    <Property Name="Image_Of_ID_Name" Type="varchar(max)" />
+    <Property Name="Image_Of_ID_Path" Type="nvarchar(max)" />
+    <Property Name="BankStatement_Image" Type="varchar(max)" />
+    <Property Name="BankStatement_ImagePath" Type="nvarchar(max)" />
+    <Property Name="TitleID" Type="int" />
+  </EntityType>
+  <EntityType Name="Employee_Status">
+    <Key>
+      <PropertyRef Name="Emp_StatusID" />
+    </Key>
+    <Property Name="Emp_StatusID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Employee_Type">
+    <Key>
+      <PropertyRef Name="Emp_TypeID" />
+    </Key>
+    <Property Name="Emp_TypeID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Employee_Type_Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FinancialDocument">
+    <Key>
+      <PropertyRef Name="FinanceID" />
+    </Key>
+    <Property Name="FinanceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DocumentDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="GeneralDocument">
+    <Key>
+      <PropertyRef Name="GeneralDocumentsID" />
+    </Key>
+    <Property Name="GeneralDocumentsID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DocumentTitle" Type="varchar" MaxLength="50" />
+    <Property Name="DocumentDescription" Type="varchar" MaxLength="150" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="Invoice">
+    <Key>
+      <PropertyRef Name="InvoiceID" />
+    </Key>
+    <Property Name="InvoiceID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="varchar" MaxLength="50" />
+    <Property Name="Unit_Cost" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Sub_Total" Type="nchar" MaxLength="10" />
+    <Property Name="Tax_Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Total_Amount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Date_Created" Type="date" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="int" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Meeting_Minutes">
+    <Key>
+      <PropertyRef Name="Meeting_MinutesID" />
+    </Key>
+    <Property Name="Meeting_MinutesID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Date_Taken" Type="date" />
+    <Property Name="Meeting_Agenda" Type="varchar" MaxLength="50" />
+    <Property Name="Meeting_Description" Type="varchar" MaxLength="150" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="Quotation">
+    <Key>
+      <PropertyRef Name="QuotationID" />
+    </Key>
+    <Property Name="QuotationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="350" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Unit_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Total_Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Date_Created" Type="date" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="CompanyAccountID" Type="int" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="Supplier_ID" />
+    </Key>
+    <Property Name="Supplier_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CompanyName" Type="varchar" MaxLength="50" />
+    <Property Name="EmailAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Cellphone" Type="varchar" MaxLength="15" />
+    <Property Name="PhysicalAddress" Type="varchar" MaxLength="350" />
+  </EntityType>
+  <EntityType Name="SupplierOrder">
+    <Key>
+      <PropertyRef Name="OrderID" />
+    </Key>
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="OrderDate" Type="date" />
+    <Property Name="InvoiceAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="ItemName" Type="varchar" MaxLength="50" />
+    <Property Name="ItemDescription" Type="varchar" MaxLength="150" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="ImageName" Type="varchar(max)" />
+    <Property Name="ImagePath" Type="nvarchar(max)" />
+    <Property Name="CompanyAccountID" Type="int" />
+    <Property Name="SupplierID" Type="int" />
+    <Property Name="CustomerID" Type="int" />
+  </EntityType>
+  <EntityType Name="Title">
+    <Key>
+      <PropertyRef Name="TitleID" />
+    </Key>
+    <Property Name="TitleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title_Description" Type="varchar" MaxLength="15" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="User_ID" />
+    </Key>
+    <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Email_Address" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar(max)" />
+    <Property Name="UserRole_ID" Type="int" />
+  </EntityType>
+  <EntityType Name="UserRole">
+    <Key>
+      <PropertyRef Name="UserRole_ID" />
+    </Key>
+    <Property Name="UserRole_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserRole_Description" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'SMME_Hackathon2022.dbo.VAT' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="VAT">
+    <Key>
+      <PropertyRef Name="VAT_ID" />
+    </Key>
+    <Property Name="VAT_ID" Type="int" Nullable="false" />
+    <Property Name="VAT_Percentage" Type="decimal" Precision="4" Scale="2" />
+    <Property Name="Date" Type="date" />
+  </EntityType>
+  <EntityContainer Name="SMME_Hackathon2022ModelStoreContainer">
+    <EntitySet Name="Company_Account" EntityType="Self.Company_Account" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CompanyReport" EntityType="Self.CompanyReport" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Customer" EntityType="Self.Customer" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Status" EntityType="Self.Employee_Status" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Employee_Type" EntityType="Self.Employee_Type" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FinancialDocument" EntityType="Self.FinancialDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="GeneralDocument" EntityType="Self.GeneralDocument" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Invoice" EntityType="Self.Invoice" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Meeting_Minutes" EntityType="Self.Meeting_Minutes" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Quotation" EntityType="Self.Quotation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SupplierOrder" EntityType="Self.SupplierOrder" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Title" EntityType="Self.Title" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="VAT" EntityType="Self.VAT" store:Type="Tables" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [VAT].[VAT_ID] AS [VAT_ID], 
+    [VAT].[VAT_Percentage] AS [VAT_Percentage], 
+    [VAT].[Date] AS [Date]
+    FROM [dbo].[VAT] AS [VAT]</DefiningQuery>
+    </EntitySet>
+  </EntityContainer>
+</Schema>
