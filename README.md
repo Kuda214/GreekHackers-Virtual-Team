@@ -1,15 +1,16 @@
+🎉 🎉 🎉 🎉 🎉 We won 3rd Place
 # GreekHackers-Virtual-Team
-Team Members Names. (Greek Hackers).
-1.Ketro Sithole (Team Leader)   sithole.tk@tuks.co.za
-2.Kudakwashe Chivunga (Deputy)   
-3.Isaac Choma
-4.Precious Nhlapo
-5.Abdud-Dayyaan Sedick
-6.Andrew Maphosa
-7.Lettie Molapisi
-8.Surprise Mhlongo
-9.Khuselo Ngqamakhwe 
-10.Paballo Mathipa
+Team Members Names. (Greek Hackers). <br>
+1.Ketro Sithole (Team Leader)   sithole.tk@tuks.co.za <br>
+2.Kudakwashe Chivunga (Deputy)   <br>
+3.Isaac Choma <br>
+4.Precious Nhlapo <br>
+5.Abdud-Dayyaan Sedick <br>
+6.Andrew Maphosa <br>
+7.Lettie Molapisi <br>
+8.Surprise Mhlongo <br>
+9.Khuselo Ngqamakhwe <br>
+10.Paballo Mathipa <br>
 
 # Township-SMME-Hackathon-2022
 
