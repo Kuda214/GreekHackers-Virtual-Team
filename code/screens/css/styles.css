@@ -105,7 +105,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     opacity: 0.9;
-    filter: brightness(90%);
+    filter: brightness(30%);
    
   }
 
@@ -117,10 +117,11 @@ body {
     position: absolute;
     bottom: 200px;
     right: 20px;
-    color: #071d3d;
+    color: #ffffff;
     padding-left: 20px;
     padding-right: 20px;
     font-size: 30px;
+    text-align: center;
   }
 
   .text-icon{
@@ -130,6 +131,7 @@ body {
     color: white;
     padding-left: 20px;
     padding-right: 20px;   
+    padding-bottom: 5%;
   }
 
   .col{
